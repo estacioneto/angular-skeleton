@@ -2,6 +2,27 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.3.
 
+## What is AngularSkeleton
+
+It's a project designed to be used as your application base. To do so, it contains:
+
+* Routing
+* Material MDC (`@angular-mdc/web`)
+* Firebase (Change the `environment.*.ts` files to use you Firebase account).
+
+## New Project
+
+Clone the project and then just run the following commands:
+
+```bash
+rm -rf .git
+git init
+git add .
+git commit -m "Initial commit"
+git remote add origin <your repo name>
+git push -u origin master
+```
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
