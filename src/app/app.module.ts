@@ -1,16 +1,22 @@
-import { BrowserModule } from '@angular/platform-browser'
-import { NgModule } from '@angular/core'
-import { AppMaterialModule } from './material.module'
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
-import { AppComponent } from './app.component'
-import { ServiceWorkerModule } from '@angular/service-worker'
-import { environment } from '../environments/environment'
+import { MdcTypographyModule } from '@angular-mdc/web';
+import { HomePageModule } from './home-page/home-page.module';
+import { AppComponent } from './app.component';
+
+import { environment } from '../environments/environment';
+import { appRoutes } from './app.routes';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
+    MdcTypographyModule,
+    RouterModule.forRoot(appRoutes),
+    HomePageModule,
     BrowserModule,
-    AppMaterialModule,
     ServiceWorkerModule.register('/ngsw-worker.js', {
       enabled: environment.production,
     }),

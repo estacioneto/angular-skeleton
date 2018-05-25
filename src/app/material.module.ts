@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core'
+import { NgModule } from '@angular/core';
 import {
   MdcButtonModule,
   MdcCardModule,
@@ -25,7 +25,7 @@ import {
   MdcThemeModule,
   MdcToolbarModule,
   MdcTypographyModule,
-} from '@angular-mdc/web'
+} from '@angular-mdc/web';
 
 @NgModule({
   exports: [
