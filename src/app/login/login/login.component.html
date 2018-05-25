@@ -1,0 +1,24 @@
+<mdc-card class="login-card pa3">
+  <div *ngIf="authService.afAuth.user | async as user; else showLogin">
+    <div mdcHeadline6 class="pv2 tc">Hello {{ user.displayName }}!</div>
+    <div class="pv3">
+      <mdc-list-divider></mdc-list-divider>
+    </div>
+    <div class="flex">
+      <button mdc-button class="w-50" (click)="logout()">Logout</button>
+      <button mdc-button [raised]="true" class="w-50 br4 round-border-1" (click)="goHome()">Go home</button>
+    </div>
+  </div>
+  <ng-template #showLogin class="flex flex-column items-center">
+    <div mdcHeadline5 class="pv2 tc">Please login</div>
+    <div class="pv3">
+      <mdc-list-divider></mdc-list-divider>
+    </div>
+    <div>
+      <button mdc-button class="login-google-button w-100" [raised]="true" [icon]="googlesvg" (click)="login()">
+        <object data="../../../assets/svg/google.svg" #googlesvg></object>
+        Login with Google
+      </button>
+    </div>
+  </ng-template>
+</mdc-card>

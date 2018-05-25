@@ -1,3 +1,6 @@
 <div mdcTypography>
-  <router-outlet></router-outlet>
+  <mdc-linear-progress [closed]="userLoaded"></mdc-linear-progress>
+  <div [hidden]="!userLoaded">
+    <router-outlet></router-outlet>
+  </div>
 </div>

@@ -1,2 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~@angular-mdc/theme/material';
+.round-border-1 {
+  border-radius: 10px;
+}
+
+.round-border-2 {
+  border-radius: 20px;
+}
