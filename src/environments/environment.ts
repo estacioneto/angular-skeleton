@@ -5,12 +5,12 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: 'AIzaSyAS6FgVIkwVKgZXiNmvcIbhEt6JEX7paBA',
-    authDomain: 'angular-skeleton-75917.firebaseapp.com',
-    databaseURL: 'https://angular-skeleton-75917.firebaseio.com',
-    projectId: 'angular-skeleton-75917',
-    storageBucket: 'angular-skeleton-75917.appspot.com',
-    messagingSenderId: '693119600523',
+    apiKey: "AIzaSyDeDD1_c-iPxPWAZUcdLZosZ3cv6nOWOwA",
+    authDomain: "angular-skeleton-pwa.firebaseapp.com",
+    databaseURL: "https://angular-skeleton-pwa.firebaseio.com",
+    projectId: "angular-skeleton-pwa",
+    storageBucket: "angular-skeleton-pwa.appspot.com",
+    messagingSenderId: "93000299685"
   },
 };
 
