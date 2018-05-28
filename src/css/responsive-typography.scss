@@ -1,0 +1,12 @@
+@import '~@angular-mdc/theme/material-components-web/typography/mdc-typography';
+@import 'tachyons-queries';
+
+@each $breakpoint, $representation in $media-breakpoints {
+  @include break($breakpoint) {
+    @each $style in map-keys($mdc-typography-styles) {
+      .mdc-typography--#{$style}-#{$representation} {
+        @include mdc-typography($style);
+      }
+    }
+  }
+}

@@ -8,8 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy":
-      "ng build --prod && firebase deploy --project angular-skeleton-pwa"
+    "deploy": "ng build --prod && firebase deploy --project angular-skeleton-pwa"
   },
   "private": true,
   "dependencies": {

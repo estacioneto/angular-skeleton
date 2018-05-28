@@ -24,9 +24,7 @@
             "tsConfig": "src/tsconfig.app.json",
             "assets": ["src/favicon.ico", "src/assets", "src/manifest.json"],
             "styles": [
-              "src/theme.scss",
               "src/styles.scss",
-              "src/roboto.scss",
               "node_modules/tachyons/css/tachyons.min.css"
             ],
             "scripts": []

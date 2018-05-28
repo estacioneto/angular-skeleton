@@ -1,11 +1,11 @@
+import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NotFoundComponent } from './not-found/not-found.component';
+import { ErrorPageComponent } from './error-page/error-page.component';
+import { AppMaterialModule } from '../material.module';
 
 @NgModule({
-  imports: [
-    CommonModule
-  ],
-  declarations: [NotFoundComponent]
+  imports: [CommonModule, AppMaterialModule, RouterModule],
+  declarations: [ErrorPageComponent],
 })
-export class ErrorModule { }
+export class ErrorModule {}

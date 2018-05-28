@@ -1,11 +1,4 @@
-@import '../../../styles';
-
-.login-card {
-  @extend .round-border-1;
-}
-
 .login-google-button {
-  @extend .round-border-2;
   background-color: white;
   color: black;
 }

@@ -1,0 +1,16 @@
+<div class="flex justify-center pa4">
+  <div class="flex flex-column pv2 tc">
+    <div mdcHeadline4 class="pv2 f3 f2-ns">
+      Something went wrong :(
+    </div>
+    <div mdcHeadline5 class="pv2 f4 f3-ns">
+      Error {{status}}
+    </div>
+    <div *ngIf="message" mdcBody1 class="pv2 f5 f4-ns">
+      {{message}}
+    </div>
+    <div class="pv4">
+      <button mdc-button [raised]="true" class="br-pill" routerLink="/">Go home</button>
+    </div>
+  </div>
+</div>

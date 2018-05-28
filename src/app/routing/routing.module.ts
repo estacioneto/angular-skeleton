@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 
 import { HomePageModule } from '../home-page/home-page.module';
 import { LoginModule } from '../login/login.module';
+import { ErrorModule } from '../error/error.module';
 
 import { appRoutes } from './app.routes';
 
@@ -12,6 +13,7 @@ import { appRoutes } from './app.routes';
     CommonModule,
     HomePageModule,
     LoginModule,
+    ErrorModule,
     RouterModule.forRoot(appRoutes),
   ],
   exports: [RouterModule],
