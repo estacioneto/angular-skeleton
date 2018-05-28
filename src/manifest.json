@@ -1,7 +1,7 @@
 {
-  "name": "angular-skeleton",
-  "short_name": "angular-skeleton",
-  "theme_color": "#1976d2",
+  "name": "Angular Skeleton",
+  "short_name": "Angular Skeleton",
+  "theme_color": "#673ab7",
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "/",
