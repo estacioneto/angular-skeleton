@@ -13,7 +13,8 @@ export class LoginPageComponent implements OnInit {
 
   onLoggedIn(info) {
     if (info.redirect) {
-      this.router.navigate(['']);
+      return this.router.navigate(['']);
     }
+    return info;
   }
 }

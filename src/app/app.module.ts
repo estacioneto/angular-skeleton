@@ -20,7 +20,7 @@ import { environment } from '../environments/environment';
     AppMaterialModule,
     BrowserModule,
     ServiceWorkerModule.register('/ngsw-worker.js', {
-      enabled: true,
+      enabled: environment.production,
     }),
     RoutingModule,
     AngularFireModule.initializeApp(environment.firebase),

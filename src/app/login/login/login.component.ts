@@ -6,6 +6,7 @@ import {
   ViewChild,
 } from '@angular/core';
 import { AuthService } from '../../providers/auth.service';
+import { ToastService } from '../../message/toast.service';
 
 @Component({
   selector: 'app-login',
@@ -15,12 +16,21 @@ import { AuthService } from '../../providers/auth.service';
 export class LoginComponent implements OnInit {
   @Output() loggedIn = new EventEmitter<any>();
 
-  constructor(public authService: AuthService) {}
+  constructor(
+    public authService: AuthService,
+    private toastService: ToastService
+  ) {}
 
   ngOnInit() {}
 
   login() {
-    this.authService.loginWithGoogle().then(this.loggedIn.emit);
+    this.authService
+      .loginWithGoogle()
+      .then(info => {
+        this.toastService.show({ message: `You're logged in!`, action: 'OK' });
+        return info;
+      })
+      .then(this.loggedIn.emit);
   }
 
   goHome() {
