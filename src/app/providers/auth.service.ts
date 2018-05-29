@@ -8,7 +8,7 @@ export class AuthService {
   constructor(public afAuth: AngularFireAuth) {}
 
   loginWithGoogle() {
-    return this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider());
+    return this.afAuth.auth.signInWithRedirect(new auth.GoogleAuthProvider());
   }
 
   logout() {

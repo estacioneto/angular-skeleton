@@ -9,6 +9,9 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 
 import { RoutingModule } from './routing/routing.module';
 import { AppMaterialModule } from './material.module';
+import { ErrorModule } from './error/error.module';
+import { HomePageModule } from './home-page/home-page.module';
+import { LoginModule } from './login/login.module';
 
 import { AppComponent } from './app.component';
 import { AuthService } from './providers/auth.service';
@@ -18,11 +21,18 @@ import { environment } from '../environments/environment';
   declarations: [AppComponent],
   imports: [
     AppMaterialModule,
+    HomePageModule,
+    LoginModule,
+    ErrorModule,
+    RoutingModule,
+
+    // Config Modules
     BrowserModule,
     ServiceWorkerModule.register('/ngsw-worker.js', {
       enabled: environment.production,
     }),
-    RoutingModule,
+
+    // Firebase Modules
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireAuthModule,
