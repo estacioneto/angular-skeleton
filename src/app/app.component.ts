@@ -19,9 +19,6 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.authService.afAuth.authState.subscribe(data => {
       this.userLoaded = true;
-      if (!data && this.router.url !== '/login') {
-        this.router.navigate(['login', { redirect: this.router.url }]);
-      }
     });
   }
 }

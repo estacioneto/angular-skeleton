@@ -4,10 +4,11 @@ import { CommonModule } from '@angular/common';
 
 import { HomePageComponent } from '../home-page/home-page.component';
 import { LoginPageComponent } from '../login/login-page/login-page.component';
+import { AuthGuardService } from '../providers/auth-guard.service';
 
 const appRoutes: Routes = [
   { path: 'login', component: LoginPageComponent },
-  { path: '', component: HomePageComponent },
+  { path: '', canActivate: [AuthGuardService], component: HomePageComponent },
   { path: '**', redirectTo: '/not-found' },
 ];
 
