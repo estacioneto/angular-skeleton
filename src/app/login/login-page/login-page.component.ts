@@ -2,7 +2,6 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, ParamMap, ActivatedRoute } from '@angular/router';
 import { AuthService } from '../../providers/auth.service';
 
-import { buildMerge } from '../../shared/util';
 import { Observable, Subscription, combineLatest } from 'rxjs';
 
 @Component({
