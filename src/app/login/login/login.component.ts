@@ -33,10 +33,6 @@ export class LoginComponent implements OnInit {
       .then(this.loggedIn.emit);
   }
 
-  goHome() {
-    this.loggedIn.emit({ redirect: true });
-  }
-
   logout() {
     this.authService.logout();
   }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { AuthService } from './providers/auth.service';
 
 @Component({
@@ -10,13 +10,17 @@ import { AuthService } from './providers/auth.service';
 export class AppComponent implements OnInit {
   userLoaded = false;
 
-  constructor(public authService: AuthService, private router: Router) {}
+  constructor(
+    public authService: AuthService,
+    private router: Router,
+    private activatedRoute: ActivatedRoute
+  ) {}
 
   ngOnInit() {
     this.authService.afAuth.authState.subscribe(data => {
       this.userLoaded = true;
-      if (!data) {
-        this.router.navigate(['login']);
+      if (!data && this.router.url !== '/login') {
+        this.router.navigate(['login', { redirect: this.router.url }]);
       }
     });
   }

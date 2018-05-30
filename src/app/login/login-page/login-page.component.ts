@@ -1,20 +1,39 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Router, ParamMap, ActivatedRoute } from '@angular/router';
+import { AuthService } from '../../providers/auth.service';
+
+import { buildMerge } from '../../shared/util';
+import { Observable, Subscription } from 'rxjs';
+
+import { interval } from 'rxjs';
+import { take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-login-page',
   templateUrl: './login-page.component.html',
   styleUrls: ['./login-page.component.scss'],
 })
-export class LoginPageComponent implements OnInit {
-  constructor(private router: Router) {}
+export class LoginPageComponent implements OnInit, OnDestroy {
+  redirect$: Subscription;
 
-  ngOnInit() {}
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    private authService: AuthService
+  ) {}
 
-  onLoggedIn(info) {
-    if (info.redirect) {
-      return this.router.navigate(['']);
-    }
-    return info;
+  ngOnInit() {
+    this.redirect$ = buildMerge({
+      params: this.route.paramMap,
+      user: this.authService.afAuth.user,
+    }).subscribe(({ user, params } = {}) => {
+      if (user && params && params.get('redirect')) {
+        this.router.navigate([params.get('redirect')]);
+      }
+    });
+  }
+
+  ngOnDestroy(): void {
+    this.redirect$.unsubscribe();
   }
 }
