@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
 import { AuthService } from './providers/auth.service';
 
 @Component({
@@ -10,11 +9,7 @@ import { AuthService } from './providers/auth.service';
 export class AppComponent implements OnInit {
   userLoaded = false;
 
-  constructor(
-    public authService: AuthService,
-    private router: Router,
-    private activatedRoute: ActivatedRoute
-  ) {}
+  constructor(public authService: AuthService) {}
 
   ngOnInit() {
     this.authService.afAuth.authState.subscribe(data => {
