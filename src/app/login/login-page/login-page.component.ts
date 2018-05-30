@@ -3,10 +3,7 @@ import { Router, ParamMap, ActivatedRoute } from '@angular/router';
 import { AuthService } from '../../providers/auth.service';
 
 import { buildMerge } from '../../shared/util';
-import { Observable, Subscription } from 'rxjs';
-
-import { interval } from 'rxjs';
-import { take } from 'rxjs/operators';
+import { Observable, Subscription, combineLatest } from 'rxjs';
 
 @Component({
   selector: 'app-login-page',
@@ -23,11 +20,11 @@ export class LoginPageComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit() {
-    this.redirect$ = buildMerge({
-      params: this.route.paramMap,
-      user: this.authService.afAuth.user,
-    }).subscribe(({ user, params } = {}) => {
-      if (user && params && params.get('redirect')) {
+    this.redirect$ = combineLatest(
+      this.route.paramMap,
+      this.authService.afAuth.user
+    ).subscribe(([params, user]) => {
+      if (user && params.get('redirect')) {
         this.router.navigate([params.get('redirect')]);
       }
     });
