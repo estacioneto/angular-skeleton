@@ -13,6 +13,7 @@
   "private": true,
   "dependencies": {
     "@angular-mdc/web": "^0.35.7",
+    "@angular-redux/store": "^9.0.0",
     "@angular/animations": "^6.0.2",
     "@angular/common": "^6.0.2",
     "@angular/compiler": "^6.0.2",
