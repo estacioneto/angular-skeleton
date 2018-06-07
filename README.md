@@ -6,9 +6,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 It's a project designed to be used as your application base. To do so, it contains:
 
-* Routing
-* Material MDC (`@angular-mdc/web`)
-* Firebase (Change the `environment.*.ts` files to use you Firebase account).
+* [Routing](https://angular.io/guide/router)
+* [Angular MDC](https://trimox.github.io/angular-mdc-web)
+* [Firebase](https://firebase.google.com) / [AngularFire2](https://github.com/angular/angularfire2) (Change the `environment.*.ts` files to use you Firebase account).
+* [NgRedux](https://github.com/angular-redux/store)
 
 ## New Project
 
