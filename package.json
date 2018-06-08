@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "pretest": "yarn",
     "test": "ng test --source-map=false",
     "lint": "ng lint",
     "e2e": "ng e2e",
