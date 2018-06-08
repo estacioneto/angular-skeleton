@@ -44,7 +44,6 @@ import { environment } from '../environments/environment';
     NgReduxModule,
     StoreModule,
   ],
-  providers: [AuthService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

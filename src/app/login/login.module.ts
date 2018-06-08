@@ -11,7 +11,6 @@ import { AuthService } from '../providers/auth.service';
 
 @NgModule({
   imports: [CommonModule, AppMaterialModule, MessageModule, RouterModule],
-  providers: [AuthService],
   declarations: [LoginComponent, LoginPageComponent],
 })
 export class LoginModule {}
