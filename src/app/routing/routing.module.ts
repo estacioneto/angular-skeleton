@@ -6,7 +6,7 @@ import { HomePageComponent } from '../home-page/home-page.component';
 import { LoginPageComponent } from '../login/login-page/login-page.component';
 import { AuthGuardService } from '../providers/auth-guard.service';
 
-const appRoutes: Routes = [
+export const appRoutes: Routes = [
   { path: 'login', component: LoginPageComponent },
   {
     path: '',
@@ -21,4 +21,4 @@ const appRoutes: Routes = [
   imports: [CommonModule, RouterModule.forRoot(appRoutes)],
   exports: [RouterModule],
 })
-export class RoutingModule {}
+export class AppRoutingModule {}

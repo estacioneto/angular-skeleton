@@ -5,10 +5,11 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "test": "ng test",
+    "test": "ng test --source-map=false",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng build --prod && firebase deploy --project angular-skeleton-pwa"
+    "deploy":
+      "ng build --prod && firebase deploy --project angular-skeleton-pwa"
   },
   "private": true,
   "dependencies": {

@@ -1,6 +1,6 @@
 <div mdcTypography>
   <mdc-linear-progress [closed]="userLoaded"></mdc-linear-progress>
-  <div mdcHeadline3 class="tc f2 f1-ns pt1">Angular Skeleton</div>
+  <div mdcHeadline3 class="tc f2 f1-ns pt1">{{title}}</div>
   <div *ngIf="userLoaded">
     <router-outlet></router-outlet>
   </div>

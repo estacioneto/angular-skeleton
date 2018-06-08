@@ -8,6 +8,7 @@ import { AuthService } from './providers/auth.service';
 })
 export class AppComponent implements OnInit {
   userLoaded = false;
+  title = 'Angular Skeleton';
 
   constructor(public authService: AuthService) {}
 

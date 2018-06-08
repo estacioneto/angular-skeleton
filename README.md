@@ -1,5 +1,8 @@
 # AngularSkeleton
 
+[![dependencies Status](https://david-dm.org/estacioneto/angular-skeleton/status.svg)](https://david-dm.org/estacioneto/angular-skeleton)
+[![devDependencies Status](https://david-dm.org/estacioneto/angular-skeleton/dev-status.svg)](https://david-dm.org/estacioneto/angular-skeleton?type=dev)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.3.
 
 ## What is AngularSkeleton
