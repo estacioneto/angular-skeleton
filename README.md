@@ -1,5 +1,6 @@
 # AngularSkeleton
 
+[![Build Status](https://travis-ci.org/estacioneto/angular-skeleton.svg?branch=master)](https://travis-ci.org/estacioneto/angular-skeleton)
 [![dependencies Status](https://david-dm.org/estacioneto/angular-skeleton/status.svg)](https://david-dm.org/estacioneto/angular-skeleton)
 [![devDependencies Status](https://david-dm.org/estacioneto/angular-skeleton/dev-status.svg)](https://david-dm.org/estacioneto/angular-skeleton?type=dev)
 
