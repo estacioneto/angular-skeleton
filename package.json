@@ -9,13 +9,11 @@
     "test": "ng test --source-map=false",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy":
-      "ng build --prod && firebase deploy --project angular-skeleton-pwa"
+    "deploy": "ng build --prod && firebase deploy --project angular-skeleton-pwa"
   },
   "private": true,
   "dependencies": {
     "@angular-mdc/web": "^0.35.7",
-    "@angular-redux/store": "^9.0.0",
     "@angular/animations": "^6.0.2",
     "@angular/common": "^6.0.2",
     "@angular/compiler": "^6.0.2",
@@ -27,14 +25,12 @@
     "@angular/pwa": "^0.6.3",
     "@angular/router": "^6.0.2",
     "@angular/service-worker": "^6.0.2",
+    "@ngrx/store": "6.0.1",
     "angularfire2": "^5.0.0-rc.10",
     "core-js": "^2.5.4",
     "firebase": "^5.0.4",
     "lodash": "^4.17.10",
-    "redux": "^4.0.0",
-    "redux-logger": "^3.0.6",
-    "redux-promise-middleware": "^5.1.1",
-    "redux-thunk": "^2.3.0",
+    "ngrx-store-logger": "^0.2.2",
     "rxjs": "^6.0.0",
     "tachyons": "^4.9.1",
     "zone.js": "^0.8.26"

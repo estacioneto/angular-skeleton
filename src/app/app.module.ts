@@ -1,20 +1,17 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { ServiceWorkerModule } from '@angular/service-worker';
-import { NgReduxModule } from '@angular-redux/store';
 import { AngularFireModule } from 'angularfire2';
 
-import { AppRoutingModule } from './routing/routing.module';
-import { AppMaterialModule } from './material.module';
-import { AppFirebaseModule } from './firebase.module';
+import { environment } from '../environments/environment';
+import { AppComponent } from './app.component';
 import { ErrorModule } from './error/error.module';
+import { AppFirebaseModule } from './firebase.module';
 import { HomePageModule } from './home-page/home-page.module';
 import { LoginModule } from './login/login.module';
-import { StoreModule } from './store/store.module';
-
-import { AppComponent } from './app.component';
-import { AuthService } from './providers/auth.service';
-import { environment } from '../environments/environment';
+import { AppMaterialModule } from './material.module';
+import { AppRoutingModule } from './routing/routing.module';
+import { AppStoreModule } from './store/store.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -28,7 +25,6 @@ import { environment } from '../environments/environment';
     ServiceWorkerModule.register('/ngsw-worker.js', {
       enabled: environment.production,
     }),
-
     AngularFireModule.initializeApp(environment.firebase),
 
     // Custom App Modules
@@ -37,8 +33,7 @@ import { environment } from '../environments/environment';
     AppRoutingModule,
 
     // Redux Modules
-    NgReduxModule,
-    StoreModule,
+    AppStoreModule,
   ],
   bootstrap: [AppComponent],
 })

@@ -1,30 +1,24 @@
 import { NgModule } from '@angular/core';
-import { NgReduxModule, NgRedux } from '@angular-redux/store';
-import { createStore, applyMiddleware, Store } from 'redux';
-import promise from 'redux-promise-middleware';
-import thunk from 'redux-thunk';
-import { createLogger } from 'redux-logger';
+import { ActionReducer, StoreModule } from '@ngrx/store';
+import { storeLogger } from 'ngrx-store-logger';
 
-import IAppState from './model/index';
-import rootReducer from './reducers/index';
 import { environment } from '../../environments/environment';
+import IAppState from './model';
+import rootReducer from './reducers';
 
-const middlewares = [promise(), thunk];
-
-if (!environment.production) {
-  middlewares.push(createLogger());
+export function logger(reducer: ActionReducer<IAppState>): any {
+  // default, no options
+  return storeLogger()(reducer);
 }
 
-const middleware = applyMiddleware(...middlewares);
-
-const store: Store<IAppState> = createStore(rootReducer, middleware);
-
 @NgModule({
-  imports: [NgReduxModule],
+  imports: [
+    StoreModule.forRoot(rootReducer, {
+      metaReducers: environment.production ? [] : [logger],
+    }),
+  ],
   declarations: [],
 })
-export class StoreModule {
-  constructor(ngRedux: NgRedux<IAppState>) {
-    ngRedux.provideStore(store);
-  }
+export class AppStoreModule {
+  constructor() {}
 }
