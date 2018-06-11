@@ -13,7 +13,7 @@ It's a project designed to be used as your application base. To do so, it contai
 * [Routing](https://angular.io/guide/router)
 * [Angular MDC](https://trimox.github.io/angular-mdc-web)
 * [Firebase](https://firebase.google.com) / [AngularFire2](https://github.com/angular/angularfire2) (Change the `environment.*.ts` files to use you Firebase account).
-* [NgRedux](https://github.com/angular-redux/store)
+* [NgRx](https://github.com/ngrx/platform)
 
 ## New Project
 
