@@ -1,16 +1,17 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { AppMaterialModule } from './../material.module';
 import { HomePageComponent } from './home-page.component';
 
-xdescribe('HomePageComponent', () => {
+describe('HomePageComponent', () => {
   let component: HomePageComponent;
   let fixture: ComponentFixture<HomePageComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HomePageComponent ]
-    })
-    .compileComponents();
+      imports: [AppMaterialModule],
+      declarations: [HomePageComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
