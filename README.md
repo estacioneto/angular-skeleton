@@ -11,7 +11,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 It's a project designed to be used as your application base. To do so, it contains:
 
 * [Routing](https://angular.io/guide/router)
-* [Angular MDC](https://trimox.github.io/angular-mdc-web)
+* [Angular Material](https://material.angular.io/)
 * [Firebase](https://firebase.google.com) / [AngularFire2](https://github.com/angular/angularfire2) (Change the `environment.*.ts` files to use you Firebase account).
 * [NgRx](https://github.com/ngrx/platform)
 
