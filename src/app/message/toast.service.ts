@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import { MdcSnackbar } from '@angular-mdc/web';
+import { MatSnackBar } from '@angular/material';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ToastService {
-  constructor(private toast: MdcSnackbar) {}
+  constructor(private toast: MatSnackBar) {}
 
   show({
     message,
@@ -14,9 +14,9 @@ export class ToastService {
   }: {
     message: string;
     action: string;
-    align?: string;
+    direction?: 'ltr' | 'rtl';
   }) {
-    config.align = config.align || 'start';
-    return this.toast.show(message, action, config);
+    config.direction = config.direction || 'ltr';
+    return this.toast.open(message, action, config);
   }
 }

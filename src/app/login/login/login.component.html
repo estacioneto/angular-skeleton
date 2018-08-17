@@ -1,24 +1,24 @@
-<mdc-card class="br4 pa3">
+<mat-card class="br4 pa3">
   <div *ngIf="authService.afAuth.user | async as user; else showLogin">
     <div mdcHeadline6 class="pv2 tc">Hello {{ user.displayName }}!</div>
     <div class="pv3">
-      <mdc-list-divider></mdc-list-divider>
+      <mat-divider></mat-divider>
     </div>
     <div class="flex">
-      <button mdc-button class="w-50" (click)="logout()">Logout</button>
-      <button mdc-button [raised]="true" class="w-50 br-pill" routerLink="/">Go home</button>
+      <button mat-button class="w-50" (click)="logout()">Logout</button>
+      <button mat-raised-button class="w-50 br-pill" routerLink="/">Go home</button>
     </div>
   </div>
   <ng-template #showLogin class="flex flex-column items-center">
     <div mdcHeadline5 class="pv2 tc">Please login</div>
     <div class="pv3">
-      <mdc-list-divider></mdc-list-divider>
+      <mat-divider></mat-divider>
     </div>
     <div>
-      <button mdc-button class="login-google-button br-pill w-100" [raised]="true" [icon]="googlesvg" (click)="login()">
+      <button mat-raised-button class="login-google-button br-pill w-100" (click)="login()">
         <object data="../../../assets/svg/google.svg" #googlesvg></object>
         Login with Google
       </button>
     </div>
   </ng-template>
-</mdc-card>
+</mat-card>

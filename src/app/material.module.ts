@@ -1,59 +1,19 @@
 import { NgModule } from '@angular/core';
-import {
-  MdcButtonModule,
-  MdcCardModule,
-  MdcChipsModule,
-  MdcCheckboxModule,
-  MdcDialogModule,
-  MdcDrawerModule,
-  MdcElevationModule,
-  MdcFabModule,
-  MdcFormFieldModule,
-  MdcIconModule,
-  MdcIconToggleModule,
-  MdcLinearProgressModule,
-  MdcListModule,
-  MdcMenuModule,
-  MdcRadioModule,
-  MdcRippleModule,
-  MdcShapeModule,
-  MdcSelectModule,
-  MdcSliderModule,
-  MdcSnackbarModule,
-  MdcSwitchModule,
-  MdcTextFieldModule,
-  MdcThemeModule,
-  MdcToolbarModule,
-  MdcTypographyModule,
-} from '@angular-mdc/web';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   exports: [
-    MdcButtonModule,
-    MdcCardModule,
-    MdcChipsModule,
-    MdcCheckboxModule,
-    MdcDialogModule,
-    MdcDrawerModule,
-    MdcElevationModule,
-    MdcFabModule,
-    MdcFormFieldModule,
-    MdcIconModule,
-    MdcIconToggleModule,
-    MdcLinearProgressModule,
-    MdcShapeModule,
-    MdcListModule,
-    MdcMenuModule,
-    MdcRadioModule,
-    MdcRippleModule,
-    MdcSelectModule,
-    MdcSliderModule,
-    MdcSnackbarModule,
-    MdcSwitchModule,
-    MdcTextFieldModule,
-    MdcThemeModule,
-    MdcToolbarModule,
-    MdcTypographyModule,
+    BrowserAnimationsModule,
+    MatProgressBarModule,
+    MatButtonModule,
+    MatDividerModule,
+    MatCardModule,
+    MatSnackBarModule,
   ],
 })
 export class AppMaterialModule {}
