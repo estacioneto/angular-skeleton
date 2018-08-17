@@ -12,6 +12,7 @@ It's a project designed to be used as your application base. To do so, it contai
 
 * [Routing](https://angular.io/guide/router)
 * [Angular Material](https://material.angular.io/)
+* [Flex Layout](https://github.com/angular/flex-layout)
 * [Firebase](https://firebase.google.com) / [AngularFire2](https://github.com/angular/angularfire2) (Change the `environment.*.ts` files to use you Firebase account).
 * [NgRx](https://github.com/ngrx/platform)
 
